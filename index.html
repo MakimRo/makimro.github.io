@@ -1,3 +1,10 @@
+<script>
+  document.getElementById('dark-toggle').addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+  });
+</script>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,6 +22,7 @@
           <a href="#about" class="hover:text-blue-500">About</a>
           <a href="#projects" class="hover:text-blue-500">Projects</a>
           <a href="#contact" class="hover:text-blue-500">Contact</a>
+          <button id="dark-toggle" class="ml-4 px-3 py-1 rounded border dark:border-gray-300 border-gray-800 text-sm"> Toggle Dark Mode</button>
         </nav>
       </div>
     </header>
