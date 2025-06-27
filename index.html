@@ -6,22 +6,23 @@
     <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
- <body class="bg-repeat bg-top text-gray-800 font-sans dark:text-gray-100"
-      style="background-image: url('https://raw.githubusercontent.com/MakimRo/makimro.github.io/main/dark-blue-grain-texture-background-large-banner-web-page-header-abstract-noise-effect-design-photo.jpg');">
-    <header class="bg-white dark:bg-gray-800 shadow">
+  <body class="bg-gradient-to-br from-gray-900 via-blue-900 to-black text-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-white/10 dark:bg-gray-800/50 shadow backdrop-blur-sm">
       <div class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
         <h1 class="text-2xl font-bold">Rohan Makim</h1>
         <nav class="space-x-4">
-          <a href="#about" class="hover:text-blue-500 dark:hover:text-blue-400">About</a>
-          <a href="#projects" class="hover:text-blue-500 dark:hover:text-blue-400">Projects</a>
-          <a href="#contact" class="hover:text-blue-500 dark:hover:text-blue-400">Contact</a>
+          <a href="#about" class="hover:text-blue-400">About</a>
+          <a href="#projects" class="hover:text-blue-400">Projects</a>
+          <a href="#contact" class="hover:text-blue-400">Contact</a>
         </nav>
       </div>
     </header>
 
+    <!-- About Section -->
     <section id="about" class="max-w-4xl mx-auto py-12 px-4">
       <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-      <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+      <p class="text-lg text-gray-300 mb-4">
         Hello! I am a Georgia Tech Graduate with a Computer Engineering Degree. I am a hardworking student and have experience with embedded design and code, FPGA, AWS full stack development and more!
       </p>
       <a href="Rohan Makim full time.pdf" target="_blank"
@@ -30,11 +31,12 @@
       </a>
     </section>
 
-    <section id="projects" class="bg-white dark:bg-gray-800 py-12">
+    <!-- Projects Section -->
+    <section id="projects" class="bg-white/10 dark:bg-gray-800/20 py-12 rounded-xl backdrop-blur-sm mx-4 my-8">
       <div class="max-w-6xl mx-auto px-4">
         <h2 class="text-3xl font-semibold mb-8">Projects</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="bg-gray-50 dark:bg-gray-700 rounded-xl shadow p-4 hover:shadow-md transition">
+          <div class="bg-gray-100/80 dark:bg-gray-700 rounded-xl shadow p-4 hover:shadow-md transition">
             <h3 class="text-xl font-semibold mb-2">Project Title</h3>
             <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Brief description of your project.</p>
             <a href="#" class="text-blue-500 dark:text-blue-400 hover:underline text-sm">View Project →</a>
@@ -43,15 +45,15 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="max-w-4xl mx-auto py-12 px-4">
       <h2 class="text-3xl font-semibold mb-4">Contact</h2>
-      <p>Email: <a href="mailto:makim.rohan@gmail.com" class="text-blue-500 hover:underline">makim.rohan@gmail.com</a></p>
+      <p>Email: <a href="mailto:makim.rohan@gmail.com" class="text-blue-400 hover:underline">makim.rohan@gmail.com</a></p>
     </section>
 
-    <footer class="bg-white dark:bg-gray-800 border-t mt-12">
-      <div class="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
-        &copy; 2025 Rohan Makim. All rights reserved.
-      </div>
+    <!-- Footer -->
+    <footer class="bg-white/10 dark:bg-gray-800/30 border-t mt-12 text-center py-6 text-sm text-gray-400 backdrop-blur-sm">
+      &copy; 2025 Rohan Makim. All rights reserved.
     </footer>
   </body>
 </html>
