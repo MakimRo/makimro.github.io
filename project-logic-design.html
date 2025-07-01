@@ -14,7 +14,7 @@
     <section class="mb-16">
       <h2 class="text-3xl font-semibold mb-4">Project Overview</h2>
       <p class="text-gray-300 text-lg leading-relaxed">
-        This project involved designing, simulating, and verifying digital logic components using Cadence Virtuoso. The objective was to implement logic gates, adders, and their corresponding layouts while ensuring manufacturability through rigorous design checks and simulation.
+        This project focused on the design and layout of CMOS logic circuits using Cadence Virtuoso. The goal was to develop schematics and layouts for key logic blocks, including a 4-bit Ripple Carry Adder, ensuring proper functionality and manufacturability through DRC and LVS verification. Simulations were conducted using Spectre to evaluate timing and delay characteristics.
       </p>
     </section>
 
@@ -24,9 +24,10 @@
       <div class="grid md:grid-cols-2 gap-6 items-center">
         <img src="images/cadence-logic-gates.jpg" alt="Cadence Logic Gates Schematic" class="rounded-xl shadow-lg border border-gray-700">
         <ul class="text-gray-300 space-y-3 text-base">
-          <li>Constructed transistor-level schematics for AND, OR, XOR, NAND gates.</li>
-          <li>Designed hierarchical components including half-adders and full-adders.</li>
-          <li>Prepared clean and functional netlists for layout integration.</li>
+          <li>Created transistor-level schematics for fundamental gates: AND, OR, XOR, NAND.</li>
+          <li>Built schematic symbols for each gate and validated function using simulation waveforms.</li>
+          <li>Designed half-adder and full-adder blocks using hierarchical composition.</li>
+          <li>Integrated full-adder blocks into a complete 4-bit Ripple Carry Adder for timing analysis.</li>
         </ul>
       </div>
     </section>
@@ -37,9 +38,10 @@
       <div class="grid md:grid-cols-2 gap-6 items-center">
         <img src="images/cadence-adder-layout.jpg" alt="Adder Layout with DRC Passed" class="rounded-xl shadow-lg border border-gray-700">
         <ul class="text-gray-300 space-y-3 text-base">
-          <li>Developed full-custom layouts from schematic designs using Cadence Layout Editor.</li>
-          <li>Ensured minimal area usage and adhered to best practices for layout symmetry and routing.</li>
-          <li>Utilized all standard layers (poly, metal, diffusion) and ensured connectivity across instances.</li>
+          <li>Developed full-custom layouts for all basic logic gates and adder blocks.</li>
+          <li>Used standard layer practices (nwell, poly, metal1, diffusion, and contact) while minimizing area and ensuring symmetry.</li>
+          <li>Performed cell-level routing, verified connections visually and through layout extraction.</li>
+          <li>Completed layout assembly of the 4-bit adder using pre-verified full-adder layouts.</li>
         </ul>
       </div>
     </section>
@@ -48,10 +50,10 @@
     <section class="mb-16">
       <h2 class="text-2xl font-semibold mb-4">Verification and Simulation</h2>
       <ul class="text-gray-300 space-y-3 text-base list-disc list-inside">
-        <li>Performed DRC (Design Rule Check) to verify layout compliance with manufacturing rules.</li>
-        <li>Conducted LVS (Layout Versus Schematic) checks to validate the physical layout against the schematic netlist.</li>
-        <li>Simulated gate and adder circuits using Spectre to assess functional correctness and timing behavior.</li>
-        <li>Measured propagation delays across varying voltage levels; worst-case delay for the 4-bit adder was approximately 128.11 ps.</li>
+        <li>DRC (Design Rule Check) was run after each layout to catch and resolve spacing, width, and enclosure violations.</li>
+        <li>LVS (Layout Versus Schematic) was used to ensure netlist equivalence between schematic and layout.</li>
+        <li>Spectre simulations verified logical function of each block with realistic signal inputs and voltage sweeps.</li>
+        <li>The 4-bit adder showed consistent behavior across multiple supply voltages; measured propagation delay was ~128 ps worst-case.</li>
       </ul>
     </section>
 
@@ -59,7 +61,7 @@
     <section class="mb-20">
       <h2 class="text-2xl font-semibold mb-4">Conclusion</h2>
       <p class="text-gray-300 text-lg leading-relaxed">
-        The project provided valuable experience in the end-to-end design and verification flow for custom digital logic. Working through both schematic and layout processes reinforced an understanding of VLSI design principles, while the simulation and validation stages ensured functional and physical correctness.
+        This project provided hands-on experience in full-custom digital design, schematic-to-layout workflows, and physical verification using the Cadence suite. It emphasized the importance of accurate schematic capture, hierarchical design, and rigorous layout verification as foundational steps toward VLSI implementation.
       </p>
     </section>
 
