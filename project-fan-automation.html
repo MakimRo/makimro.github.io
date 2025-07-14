@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fan Automation and RPM Tester</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-black text-gray-100 font-sans">
+  <main class="max-w-5xl mx-auto py-16 px-6">
+    <h1 class="text-5xl font-extrabold mb-10 text-center text-white">Fan Automation and RPM Tester</h1>
 
+    <!-- Overview Section -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-4">Project Overview</h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        This project automates the testing of computer fans by reading RPM (revolutions per minute) values from the fan and logging them using a Python script. It interfaces a microcontroller with the fan to capture tachometer signals and sends data to a host computer via serial communication. The system allows hands-free, real-time testing and validation of fan performance.
+      </p>
+    </section>
+
+    <!-- Block 1: Microcontroller Code -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4">Embedded Code for Fan RPM Reading</h2>
+      <div class="grid md:grid-cols-2 gap-6 items-center">
+        <img src="images/fan_code.png" alt="Microcontroller C Code Example" class="rounded-xl shadow-lg border border-gray-700">
+        <ul class="text-gray-300 space-y-3 text-base">
+          <li>Programmed in Embedded C to count tachometer pulses using hardware timers.</li>
+          <li>Measured the number of pulses over a fixed interval to calculate RPM.</li>
+          <li>Configured GPIO interrupts to detect rising/falling edges from the fan’s tach signal.</li>
+          <li>Sent calculated RPM data over UART to the host system for further processing.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Block 2: Python Data Logger -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4">Python Serial Interface</h2>
+      <div class="grid md:grid-cols-2 gap-6 items-center">
+        <img src="images/serial_read.png" alt="Python RPM Logging Script" class="rounded-xl shadow-lg border border-gray-700">
+        <ul class="text-gray-300 space-y-3 text-base">
+          <li>Used <code>pyserial</code> to read data from the microcontroller over USB/serial.</li>
+          <li>Logged RPM values with timestamps to a text or CSV file for analysis.</li>
+          <li>Displayed real-time RPM output in the terminal for quick validation.</li>
+          <li>Supports adjustable baud rates and configurable COM ports.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Block 3: Features and Benefits -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4">System Features</h2>
+      <ul class="text-gray-300 space-y-3 text-base list-disc list-inside">
+        <li>Non-intrusive real-time fan testing using tachometer feedback.</li>
+        <li>Cross-platform serial communication via USB interface.</li>
+        <li>Data can be easily exported to spreadsheets for trend analysis.</li>
+        <li>Expandable to support multiple fans or automated test rigs.</li>
+      </ul>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="mb-20">
+      <h2 class="text-2xl font-semibold mb-4">Conclusion</h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        This project showcases an effective and low-cost solution to test PC fans using embedded systems and scripting. It demonstrates integration of microcontroller-level signal processing with high-level data handling, and serves as a foundation for automated thermal management testing or quality assurance workflows.
+      </p>
+    </section>
+
+    <!-- GitHub Link -->
+    <div class="text-center">
+      <a href="https://github.com/MakimRo/Fan_Tester" target="_blank" class="inline-block px-6 py-2 text-blue-400 hover:text-blue-300 transition duration-200">
+        🔗 View Project on GitHub
+      </a>
+      <br/>
+      <a href="index.html" class="inline-block mt-4 px-6 py-2 text-blue-400 hover:text-blue-300 transition duration-200">
+        ← Back to Portfolio
+      </a>
+    </div>
+  </main>
+</body>
+</html>
