@@ -33,18 +33,33 @@
   </section>
 
     <!-- Block 1: Microcontroller Code -->
-    <section class="mb-16">
-      <h2 class="text-2xl font-semibold mb-4">Embedded Code for Fan RPM Reading</h2>
-      <div class="grid md:grid-cols-2 gap-6 items-center">
-        <img src="images/fan_code.png" alt="Microcontroller C Code Example" class="rounded-xl shadow-lg border border-gray-700">
-        <ul class="text-gray-300 space-y-3 text-base">
-          <li>Programmed in Embedded C to count tachometer pulses using hardware timers.</li>
-          <li>Measured the number of pulses over a fixed interval to calculate RPM.</li>
-          <li>Configured GPIO interrupts to detect rising/falling edges from the fan’s tach signal.</li>
-          <li>Sent calculated RPM data over UART to the host system for further processing.</li>
-        </ul>
+    <!-- Block: Embedded Code for Fan RPM Reading -->
+<section class="mb-16">
+  <h2 class="text-2xl font-semibold mb-8 text-center md:text-left">Embedded Code for Fan RPM Reading</h2>
+  <div class="grid md:grid-cols-2 gap-10 items-center relative">
+
+    <!-- Fancy framed card -->
+    <div class="relative w-full">
+      <!-- Background card shadow -->
+      <div class="absolute top-4 left-4 w-full h-full bg-gray-800/60 rounded-xl blur-md"></div>
+
+      <!-- Foreground image -->
+      <div class="relative z-10">
+        <img src="images/code_rpm.png" alt="Embedded C Code for RPM" class="rounded-xl border border-gray-700 shadow-xl">
       </div>
-    </section>
+    </div>
+
+    <!-- Descriptive text -->
+    <div>
+      <ul class="text-gray-300 space-y-4 text-base leading-relaxed">
+        <li><strong>Programmed</strong> in Embedded C to count tachometer pulses using hardware timers.</li>
+        <li><strong>Measured</strong> the number of pulses over a fixed interval to calculate RPM.</li>
+        <li><strong>Configured</strong> GPIO interrupts to detect rising/falling edges from the fan’s tach signal.</li>
+        <li><strong>Sent</strong> calculated RPM data over UART to the host system for further processing.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
     <!-- Block 2: Python Data Logger -->
     <section class="mb-16">
