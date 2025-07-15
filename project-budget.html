@@ -1,23 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AWS Budget Tracker</title>
+  <title>Budget App — Financial Tracker</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
-  <main class="max-w-4xl mx-auto py-12 px-4">
-    <h1 class="text-3xl font-bold mb-6">AWS Budget Tracker</h1>
-    <img src="images/budget-tracker-dashboard.jpg" alt="Budget Tracker Dashboard" class="mb-6 rounded-lg shadow-md"/>
-    <p class="mb-4">
-      This is a full-stack budgeting application that uses the Plaid API to securely connect with users' bank accounts and retrieve transaction data. Hosted on AWS using EC2 and S3.
-    </p>
-    <img src="images/budget-graph.jpg" alt="Spending Graph" class="mb-6 rounded-lg shadow-md"/>
-    <p>
-      The application visualizes spending trends, tracks category-based expenses, and allows users to set monthly goals.
-    </p>
-    <a href="index.html" class="inline-block mt-8 text-blue-600 hover:underline">← Back to Portfolio</a>
+<body class="bg-gradient-to-br from-black via-indigo-900 to-blue-950 text-gray-100 font-sans">
+  <main class="max-w-5xl mx-auto py-16 px-6">
+    <h1 class="text-5xl font-extrabold mb-10 text-center text-white">Budget App — Personal Finance Tracker</h1>
+
+    <!-- Project Overview -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-4">Project Overview</h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Budget App is a mobile‑focused web application designed to help users log transactions by category, visualize spending trends, and manage their budgets. It supports secure, private expense tracking and provides clear insights into financial habits.:contentReference[oaicite:1]{index=1}
+      </p>
+    </section>
+
+    <!-- Tech Stack & Features -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4">Technology & Features</h2>
+      <ul class="text-gray-300 space-y-3 text-base list-disc list-inside">
+        <li>✅ Built with modern web stack (HTML, CSS, JavaScript-based framework)</li>
+        <li>📱 Responsive UI optimized for mobile usage</li>
+        <li>🗂️ Categorized transaction logging with intuitive entry forms</li>
+        <li>📊 Spending summaries and time-series visualizations</li>
+        <li>🔐 Privacy‑focused: local data storage, optional account sync</li>
+      </ul>
+    </section>
+
+    <!-- Screenshot 1 -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-8 text-center md:text-left">Transaction Log Interface</h2>
+      <div class="grid md:grid-cols-2 gap-10 items-center relative">
+        <div class="relative w-full">
+          <div class="absolute top-4 left-4 w-full h-full bg-gray-800/60 rounded-xl blur-md"></div>
+          <div class="relative z-10">
+            <img src="images/tx-log.png" alt="Transaction log screenshot" class="rounded-xl border border-gray-700 shadow-xl">
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-300 text-base leading-relaxed">
+            Users can quickly add expenses or income entries with categories, dates, and amounts. The UI is optimized for touch input and fast logging.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshot 2 -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-8 text-center md:text-left">Spending Overview Dashboard</h2>
+      <div class="grid md:grid-cols-2 gap-10 items-center relative">
+        <div class="relative w-full">
+          <div class="absolute top-4 left-4 w-full h-full bg-gray-800/60 rounded-xl blur-md"></div>
+          <div class="relative z-10">
+            <img src="images/spending-dashboard.png" alt="Spending dashboard screenshot" class="rounded-xl border border-gray-700 shadow-xl">
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-300 text-base leading-relaxed">
+            Dashboard provides summaries of expenses by category and over time, helping users identify spending patterns and manage budgets effectively.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Conclusion & GitHub Link -->
+    <section class="mb-20">
+      <h2 class="text-2xl font-semibold mb-4">Conclusion</h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Budget App offers a private, user‑friendly platform for tracking expenses and budgets. It's ideal for individuals seeking a light-weight, mobile-optimized tool without sacrificing data control.
+      </p>
+    </section>
+
+    <div class="text-center">
+      <a href="https://github.com/RUBudgetApp/BudgetAppRepo" target="_blank" class="inline-block px-6 py-2 text-blue-400 hover:text-blue-300 transition duration-200">
+        🔗 View Project on GitHub
+      </a>
+      <br/>
+      <a href="index.html" class="inline-block mt-4 px-6 py-2 text-blue-400 hover:text-blue-300 transition duration-200">
+        ← Back to Portfolio
+      </a>
+    </div>
   </main>
 </body>
 </html>
