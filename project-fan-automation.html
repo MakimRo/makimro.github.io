@@ -18,64 +18,70 @@
       </p>
     </section>
 
-     <!-- Block 4: Circuit Design and Pin Mapping -->
-  <section class="mb-16">
-    <h2 class="text-2xl font-semibold mb-4">Circuit Design and Pin Mapping</h2>
-    <p class="text-gray-300 text-lg leading-relaxed mb-6">
-      The hardware configuration for the fan automation system is built around the Teensy 4.1 microcontroller. This circuit design integrates PWM outputs for fan control and tachometer input pins for RPM monitoring. Additional components like a 2.8" TFT touchscreen are connected for interactive display purposes. The image below summarizes the final pin assignments used in the project.
-    </p>
-    <div class="flex flex-col items-center">
-      <img src="images/teensy-pin-assignment.png" alt="Teensy 4.1 Pin Assignment and Circuit Design" class="rounded-xl shadow-lg border border-gray-700 max-w-full">
-      <p class="text-gray-400 mt-4 text-sm italic text-center">
-        Final layout and pin mapping used as of August 4, 2023.
-      </p>
-    </div>
-  </section>
-
-    <!-- Block 1: Microcontroller Code -->
-    <!-- Block: Embedded Code for Fan RPM Reading -->
-<section class="mb-16">
-  <h2 class="text-2xl font-semibold mb-8 text-center md:text-left">Embedded Code for Fan RPM Reading</h2>
-  <div class="grid md:grid-cols-2 gap-10 items-center relative">
-
-    <!-- Fancy framed card -->
-    <div class="relative w-full">
-      <!-- Background card shadow -->
-      <div class="absolute top-4 left-4 w-full h-full bg-gray-800/60 rounded-xl blur-md"></div>
-
-      <!-- Foreground image -->
-      <div class="relative z-10">
-        <img src="images/fan_code.png" alt="Embedded C Code for RPM" class="rounded-xl border border-gray-700 shadow-xl">
-      </div>
-    </div>
-
-    <!-- Descriptive text -->
-    <div>
-      <ul class="text-gray-300 space-y-4 text-base leading-relaxed">
-        <li><strong>Programmed</strong> in Embedded C to count tachometer pulses using hardware timers.</li>
-        <li><strong>Measured</strong> the number of pulses over a fixed interval to calculate RPM.</li>
-        <li><strong>Configured</strong> GPIO interrupts to detect rising/falling edges from the fan’s tach signal.</li>
-        <li><strong>Sent</strong> calculated RPM data over UART to the host system for further processing.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-    <!-- Block 2: Python Data Logger -->
+    <!-- Circuit Design and Pin Mapping -->
     <section class="mb-16">
-      <h2 class="text-2xl font-semibold mb-4">Python Serial Interface</h2>
-      <div class="grid md:grid-cols-2 gap-6 items-center">
-        <img src="images/serial_read.png" alt="Python RPM Logging Script" class="rounded-xl shadow-lg border border-gray-700">
-        <ul class="text-gray-300 space-y-3 text-base">
-          <li>Used <code>pyserial</code> to read data from the microcontroller over USB/serial.</li>
-          <li>Logged RPM values with timestamps to a text or CSV file for analysis.</li>
-          <li>Displayed real-time RPM output in the terminal for quick validation.</li>
-          <li>Supports adjustable baud rates and configurable COM ports.</li>
-        </ul>
+      <h2 class="text-2xl font-semibold mb-8 text-center md:text-left">Circuit Design and Pin Mapping</h2>
+      <div class="grid md:grid-cols-2 gap-10 items-center relative">
+        <div class="relative w-full">
+          <div class="absolute top-4 left-4 w-full h-full bg-gray-800/60 rounded-xl blur-md"></div>
+          <div class="relative z-10">
+            <img src="images/teensy-pin-assignment.png" alt="Teensy 4.1 Pin Assignment and Circuit Design" class="rounded-xl border border-gray-700 shadow-xl">
+          </div>
+        </div>
+        <div>
+          <p class="text-gray-300 text-lg leading-relaxed mb-4">
+            The hardware configuration for the fan automation system is built around the Teensy 4.1 microcontroller. This circuit design integrates PWM outputs for fan control and tachometer input pins for RPM monitoring. Additional components like a 2.8" TFT touchscreen are connected for interactive display purposes.
+          </p>
+          <p class="text-gray-400 text-sm italic">
+            Final layout and pin mapping used as of August 4, 2023.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Block 3: Features and Benefits -->
+    <!-- Embedded Code for Fan RPM Reading -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-8 text-center md:text-left">Embedded Code for Fan RPM Reading</h2>
+      <div class="grid md:grid-cols-2 gap-10 items-center relative">
+        <div class="relative w-full">
+          <div class="absolute top-4 left-4 w-full h-full bg-gray-800/60 rounded-xl blur-md"></div>
+          <div class="relative z-10">
+            <img src="images/fan_code.png" alt="Embedded C Code for RPM" class="rounded-xl border border-gray-700 shadow-xl">
+          </div>
+        </div>
+        <div>
+          <ul class="text-gray-300 space-y-4 text-base leading-relaxed">
+            <li><strong>Programmed</strong> in Embedded C to count tachometer pulses using hardware timers.</li>
+            <li><strong>Measured</strong> the number of pulses over a fixed interval to calculate RPM.</li>
+            <li><strong>Configured</strong> GPIO interrupts to detect rising/falling edges from the fan’s tach signal.</li>
+            <li><strong>Sent</strong> calculated RPM data over UART to the host system for further processing.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Python Serial Interface -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-8 text-center md:text-left">Python Serial Interface</h2>
+      <div class="grid md:grid-cols-2 gap-10 items-center relative">
+        <div class="relative w-full">
+          <div class="absolute top-4 left-4 w-full h-full bg-gray-800/60 rounded-xl blur-md"></div>
+          <div class="relative z-10">
+            <img src="images/serial_read.png" alt="Python RPM Logging Script" class="rounded-xl border border-gray-700 shadow-xl">
+          </div>
+        </div>
+        <div>
+          <ul class="text-gray-300 space-y-4 text-base leading-relaxed">
+            <li><strong>Used</strong> <code>pyserial</code> to read data from the microcontroller over USB/serial.</li>
+            <li><strong>Logged</strong> RPM values with timestamps to a text or CSV file for analysis.</li>
+            <li><strong>Displayed</strong> real-time RPM output in the terminal for quick validation.</li>
+            <li><strong>Supports</strong> adjustable baud rates and configurable COM ports.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- System Features -->
     <section class="mb-16">
       <h2 class="text-2xl font-semibold mb-4">System Features</h2>
       <ul class="text-gray-300 space-y-3 text-base list-disc list-inside">
