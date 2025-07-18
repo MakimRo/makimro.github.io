@@ -3,21 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Automatic Medicine Dispenser</title>
+  <title>Automated Pill Dispenser</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
-  <main class="max-w-4xl mx-auto py-12 px-4">
-    <h1 class="text-3xl font-bold mb-6">Automatic Medicine Dispenser</h1>
-    <img src="images/medicine-dispenser-1.jpg" alt="Medicine Dispenser" class="mb-6 rounded-lg shadow-md"/>
-    <p class="mb-4">
-      This project is an embedded system that automatically dispenses medication based on a set schedule. It uses a microcontroller to manage timing, dispense units, and trigger alerts for the user.
-    </p>
-    <img src="images/medicine-dispenser-2.jpg" alt="Internal Components" class="mb-6 rounded-lg shadow-md"/>
-    <p>
-      Features include user-settable schedules, safety interlocks to prevent double dosing, LED indicators, and a simple user interface.
-    </p>
-    <a href="index.html" class="inline-block mt-8 text-blue-600 hover:underline">← Back to Portfolio</a>
+<body class="bg-gradient-to-br from-gray-900 via-indigo-900 to-blue-950 text-gray-100 font-sans">
+  <main class="max-w-5xl mx-auto py-16 px-6">
+    <h1 class="text-5xl font-extrabold mb-10 text-center">Automated Pill Dispenser</h1>
+
+    <!-- Overview Section -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-4">Project Overview</h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        This device automates the dispensing of medication using a servo-controlled mechanism and verifies dispensing through a photoresistor sensor. An LCD display communicates messages to the user, while a shaker module alerts them to dispense. It uses an Arduino Uno and basic control logic implemented in C++ using hardware timers, loops, and conditional triggers.
+      </p>
+    </section>
+
+    <!-- Hardware and Design -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-8">Hardware & Mechanical Design</h2>
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <img src="images/pill_dispenser_design.png" alt="Exploded view of dispenser enclosure" class="rounded-xl border border-gray-700 shadow-xl">
+        </div>
+        <div>
+          <p class="text-gray-300 text-lg leading-relaxed">
+            The housing was modeled in CAD and 3D printed. It consists of modular red and orange parts to hold the electronics, pill chamber, and moving components securely. A central servo arm pushes pills out when triggered.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arduino Embedded Code Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-8">Embedded Control Logic</h2>
+      <ul class="text-gray-300 space-y-4 text-base leading-relaxed">
+        <li><strong>Controlled</strong> a servo motor to push pills on a timed schedule using `millis()`-based loops.</li>
+        <li><strong>Triggered</strong> a vibration module to shake pills into the correct spot for dispensing.</li>
+        <li><strong>Used</strong> a photoresistor to detect if a pill was successfully dispensed (light interruption detection).</li>
+        <li><strong>Displayed</strong> system status and instructions on a 16x2 LCD screen.</li>
+        <li><strong>Implemented</strong> logic to retry dispense if pill was not detected within a threshold delay.</li>
+      </ul>
+    </section>
+
+    <!-- Features -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4">Key Features</h2>
+      <ul class="text-gray-300 space-y-3 text-base list-disc list-inside">
+        <li>Fully automated, timed pill dispensing process with fallback logic</li>
+        <li>Modular and printable mechanical design for ease of assembly</li>
+        <li>Arduino Uno-based system with loop timing and interrupt-free logic</li>
+        <li>Live feedback using LCD</li>
+      </ul>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="mb-20">
+      <h2 class="text-2xl font-semibold mb-4">Conclusion</h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        This project demonstrates a low-cost, scalable solution for elderly or chronically ill patients to manage medication independently. The integration of sensing, actuation, and user interface showcases real-world embedded system design and mechanical prototyping.
+      </p>
+    </section>
+
+    <!-- GitHub Link -->
+    <div class="text-center">
+      <br/>
+      <a href="index.html" class="inline-block mt-4 px-6 py-2 text-blue-400 hover:text-blue-300 transition duration-200">
+        ← Back to Portfolio
+      </a>
+    </div>
   </main>
 </body>
 </html>
